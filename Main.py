@@ -23,7 +23,6 @@ with open('CurrentPlayers.csv', 'w', newline='') as csv_file:
         for i, td in enumerate(td_elements):
 
             index_name = index_names[i % len(index_names)]
-
             row_data.append(f"{index_name}: {td.contents}")
 
         csv_writer.writerow(row_data)
