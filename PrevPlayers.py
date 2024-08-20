@@ -21,7 +21,6 @@ if table:
 
         for row in table.find_all('tr')[1:]:
             data_row = [data.text.strip() for data in row.find_all('td')[1:] if data.text.strip() != 'Voting']
-
             csv_writer.writerow(data_row)
 
     print("Scraping and writing to CSV complete. Check 'heisman_data.csv'")
